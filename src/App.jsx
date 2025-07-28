@@ -63,7 +63,7 @@ function App() {
       timerComponents.push(
         <div
           key={interval}
-          className="flex flex-col items-center mx-4 p-4  rounded-lg"
+          className="w-1/2 md:w-1/4 flex flex-col items-center  p-4  rounded-lg"
         >
           <span className="text-white text-6xl font-extrabold">
             {timeLeft[interval]}
@@ -76,13 +76,11 @@ function App() {
 
   return (
     <div className="w-full h-screen flex flex-col items-center justify-center bg-gray-900 font-inter">
-      <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
-        Quanto manca
+      <h1 className="text-3xl md:text-6xl font- mb-8 bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent text-center">
+        Alle ferie
       </h1>
       {timeLeft.expired ? (
-        <span className="text-green-400 text-5xl font-semibold">
-          Il tempo è scaduto!
-        </span>
+        ""
       ) : (
         <div className="flex flex-wrap justify-center">
           {timerComponents.length ? (
